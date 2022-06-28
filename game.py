@@ -20,17 +20,22 @@ class TicTacToe():
         self.positions = None
         self.input_cnt = 0
         self.turn = "p1"
-        self.players = dict()
+        self.players = {}
 
-    def get_user_input(self, askMsg: str) -> str:
-        return input(askMsg)
+    def get_user_input(self, ask_msg: str) -> str:
+        """
+        Get user input
+        """
+        return input(ask_msg)
 
     def get_user_position(self) -> int:
         """Get player's insertion choice"""
         pos = 0
         while True:
             try:
-                pos = int(self.get_user_input("Enter the position (1-9, from letf to right, up to bottom) or 0 to leave: "))
+                pos = int(self.get_user_input("Enter the position \
+                                              (1-9, from letf to right, up to bottom) \
+                                              or 0 to leave: "))
                 if pos not in range(0, 10):
                     print("Invalid entry. Please, try again.")
                     continue
