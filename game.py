@@ -4,6 +4,7 @@ This is a python implementation of a basic Tic Tac Toe game. Have fun!
 Author: Israel Marinho
 Contact: ilm.eletrica@gmail.com
 """
+import os
 
 class TicTacToe():
     """Implement a Tic Tac Toe board game"""
@@ -40,6 +41,7 @@ class TicTacToe():
 
     def display_board(self):
         """Print the board with current marks"""
+        os.system('clear')
         print(self.board_temp.format(*self.positions))
 
     def get_started(self):
